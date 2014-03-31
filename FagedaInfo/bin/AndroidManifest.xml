@@ -27,6 +27,10 @@
             android:name="com.example.fagedainfo.SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+        <activity
+            android:name="com.example.fagedainfo.GelatsActivity"
+            android:label="@string/title_activity_gelats" >
+        </activity>
     </application>
 
 </manifest>
