@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
 	 * @param view
 	 * @throws IOException
 	 */
-	public void ferUnaFoto(View view) throws IOException {
+	public void ferUnaFoto(View view)  {
 		if (isIntentAvailable(this, MediaStore.ACTION_IMAGE_CAPTURE)) {
 			// intenció de fer una foto
 			Intent takePictureIntent = new Intent(
@@ -109,7 +109,6 @@ public class MainActivity extends Activity {
 				
 				i.putExtra(NOM, nom.getText().toString());
 				i.putExtra(COGNOM, cognom.getText().toString());
-				i.putExtra(TEMPIMAGEFILE, tempImageFile);
 				
 				startActivity(i);
 			}
@@ -122,9 +121,8 @@ public class MainActivity extends Activity {
 	 */
 	private File crearFitxer() {
 		// Create an image file name
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss")
-				.format(new Date());
-		String imageFileName = "foto" + timeStamp + ".jpg";
+
+		String imageFileName = "foto.jpg";
 		File path = new File(Environment.getExternalStorageDirectory(),
 				this.getPackageName());
 		if (!path.exists())

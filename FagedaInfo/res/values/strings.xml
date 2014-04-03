@@ -6,7 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="cognom">Cognom:</string>
     <string name="nom">Nom:</string>
-    <string name="title_activity_second">SecondActivity</string>
-    <string name="title_activity_gelats">GelatsActivity</string>
+    <string name="gelatsnostres">Els nostres gelats</string>
+    <string name="menu_settings">Settings</string>
 
 </resources>

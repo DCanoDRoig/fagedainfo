@@ -27,12 +27,12 @@ public class GelatsActivity extends Activity implements ViewSwitcher.ViewFactory
 	public void onCreate(Bundle savedInstanceState) {
  
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_gelats);
 		
-		//Typeface type = Typeface.createFromAsset(getAssets(),"bellevuebq.ttf"); 
+		Typeface type = Typeface.createFromAsset(getAssets(),"bellevuebq.ttf"); 
 		TextView titol = (TextView) findViewById(R.id.Titol);
-		//titol.setTypeface(type);
-		//titol.setTextSize(40);
+		titol.setTypeface(type);
+		titol.setTextSize(40);
 		
 		nomSwitcher = (TextSwitcher) findViewById(R.id.nomGelat);
 		nomSwitcher.setFactory(this);
