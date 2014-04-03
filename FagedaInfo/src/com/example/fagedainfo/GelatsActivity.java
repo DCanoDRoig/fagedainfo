@@ -5,9 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -31,10 +29,10 @@ public class GelatsActivity extends Activity implements ViewSwitcher.ViewFactory
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Typeface type = Typeface.createFromAsset(getAssets(),"bellevuebq.ttf"); 
+		//Typeface type = Typeface.createFromAsset(getAssets(),"bellevuebq.ttf"); 
 		TextView titol = (TextView) findViewById(R.id.Titol);
-		titol.setTypeface(type);
-		titol.setTextSize(40);
+		//titol.setTypeface(type);
+		//titol.setTextSize(40);
 		
 		nomSwitcher = (TextSwitcher) findViewById(R.id.nomGelat);
 		nomSwitcher.setFactory(this);
