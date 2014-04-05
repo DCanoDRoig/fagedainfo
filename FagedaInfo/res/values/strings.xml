@@ -8,5 +8,9 @@
     <string name="nom">Nom:</string>
     <string name="gelatsnostres">Els nostres gelats</string>
     <string name="menu_settings">Settings</string>
+    <string name="valoracions">Valoracions</string>
+    <string name="title_activity_activity_map">ActivityMap</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="arribar">Com arribar-hi</string>
 
 </resources>

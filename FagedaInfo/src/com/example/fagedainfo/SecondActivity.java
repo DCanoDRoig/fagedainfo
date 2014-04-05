@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,8 +22,7 @@ public class SecondActivity extends Activity {
 
 	private TextView nomtxt;
 	private ImageView foto;
-	private Button gelats, video;
-
+	private ImageButton gelats, video, veu, loc;
 	private MediaPlayer mediaPlayer;
 
 	@Override
@@ -34,20 +34,21 @@ public class SecondActivity extends Activity {
 		
 		String nom = getIntent().getStringExtra(MainActivity.NOM);
 		String cognom = getIntent().getStringExtra(MainActivity.COGNOM);
-//		File imatge = (File) getIntent().getSerializableExtra(
-//				MainActivity.TEMPIMAGEFILE);
+
 		String imageFileName = "foto.jpg";
 		File path = new File(Environment.getExternalStorageDirectory(),
 				this.getPackageName());
 		
-		nomtxt = (TextView) findViewById(R.id.textView1);
+		nomtxt = (TextView) findViewById(R.id.titolValoracio);
 		foto = (ImageView) findViewById(R.id.imageView1);
-		gelats = (Button) findViewById(R.id.gelats);
-		video = (Button) findViewById(R.id.video);
+		gelats = (ImageButton) findViewById(R.id.gelats);
+		video = (ImageButton) findViewById(R.id.video);
+		veu = (ImageButton) findViewById(R.id.veu);
+		loc = (ImageButton) findViewById(R.id.Map);
 
 		nomtxt.setText("Benvingut " + nom + " " + cognom);
 
-		foto.setImageBitmap(obtenirImatgeFromResource(64, 74, new File(path, imageFileName)));
+		foto.setImageBitmap(obtenirImatgeFromResource(84, 94, new File(path, imageFileName)));
 
 		gelats.setOnClickListener(new OnClickListener() {
 
@@ -64,6 +65,25 @@ public class SecondActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(SecondActivity.this, VideoPlayer.class);
+				startActivity(i);
+
+			}
+		});
+		
+		veu.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(SecondActivity.this, GravacioAudio.class);
+				startActivity(i);
+
+			}
+		});
+		loc.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(SecondActivity.this, MapActivity.class);
 				startActivity(i);
 
 			}
